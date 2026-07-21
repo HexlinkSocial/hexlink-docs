@@ -1,0 +1,117 @@
+/* src/css/custom.css */
+
+/* Import font if loading DM Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  /* ── Brand Primary Palette (mapped from SCSS accent variables) ── */
+  --ifm-color-primary: #73197a;           /* $color-accent */
+  --ifm-color-primary-dark: #7A0081;      /* $color-accent-dark */
+  --ifm-color-primary-darker: #620068;    /* Calculated step down */
+  --ifm-color-primary-darkest: #4a004e;   /* Deepest accent shade */
+  --ifm-color-primary-light: #8d3f92;     /* $color-accent-mid */
+  --ifm-color-primary-lighter: #a83db0;   /* $color-accent-light */
+  --ifm-color-primary-lightest: #b35cb7;  /* $color-accent-soft */
+
+  /* ── Backgrounds & Surfaces (Light) ── */
+  --ifm-background-color: #ffffff;        /* $color-bg */
+  --ifm-background-surface-color: #f8f7f9;/* $color-bg-subtle */
+  --ifm-hover-overlay: #f3edf4;           /* $color-bg-hover */
+
+  /* ── Typography & Neutrals ── */
+  --ifm-font-family-base: "DM Sans", "Helvetica Neue", sans-serif; /* $font-sans */
+  --ifm-font-family-monospace: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; /* $font-mono */
+  --ifm-font-color-base: #1a1a1a;         /* $color-text */
+  --ifm-color-content-secondary: #6b6b7a; /* $color-muted */
+  
+  /* ── Borders & Radii ── */
+  --ifm-border-color: rgba(0, 0, 0, 0.08);/* $color-border */
+  --ifm-global-radius: 8px;               /* $radius-md */
+  --ifm-code-font-size: 90%;
+
+  /* ── Alert/Admonition Colors ── */
+  --ifm-color-success: #5cb04f;           /* $color-success */
+  --ifm-color-danger: #df2c2c;            /* $color-error */
+}
+
+/* ── Dark Mode Overrides ── */
+[data-theme='dark'] {
+  /* Adjusted primary palette for higher contrast on dark backgrounds */
+  --ifm-color-primary: #b35cb7;           /* $color-accent-soft */
+  --ifm-color-primary-dark: #a83db0;     /* $color-accent-light */
+  --ifm-color-primary-darker: #8d3f92;   /* $color-accent-mid */
+  --ifm-color-primary-darkest: #73197a;  /* $color-accent */
+  --ifm-color-primary-light: #c274c6;
+  --ifm-color-primary-lighter: #d18dd4;
+  --ifm-color-primary-lightest: #f9e3fb;  /* $color-accent-tint */
+
+  /* Dark Backgrounds */
+  --ifm-background-color: #2e2c33;        /* $color-bg-dark */
+  --ifm-background-surface-color: #1c1827;/* $color-bg-dark-secondary */
+
+  /* Dark Text & Borders */
+  --ifm-font-color-base: #ffffff;         /* $color-text-dark */
+  --ifm-color-content-secondary: #dcd6dd; /* $color-muted-dark */
+  --ifm-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Specific Component Styling ── */
+
+/* Navbar shadow matching $shadow-banner */
+.navbar {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Doc cards & containers matching $shadow-card & $radius-lg */
+.card {
+  border-radius: 12px;
+  border: 1px solid rgba(115, 25, 122, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Smooth transition matching $transition-medium */
+a, .button, .menu__link {
+  transition: all 0.2s ease;
+}
+
+/* src/css/custom.css */
+
+/* ── Dark Mode Overrides ── */
+[data-theme='dark'] {
+  /* High-contrast purple shades for dark backgrounds */
+  --ifm-color-primary: #d18dd4;           /* Primary link / text accent */
+  --ifm-color-primary-dark: #b35cb7;
+  --ifm-color-primary-darker: #a83db0;
+  --ifm-color-primary-darkest: #8d3f92;
+  --ifm-color-primary-light: #e6c8eb;
+  --ifm-color-primary-lighter: #f9e3fb;
+  --ifm-color-primary-lightest: #ffffff;
+
+  /* Dark Backgrounds */
+  --ifm-background-color: #2e2c33;        /* $color-bg-dark */
+  --ifm-background-surface-color: #1c1827;/* $color-bg-dark-secondary */
+
+  /* Dark Text & Borders */
+  --ifm-font-color-base: #ffffff;         /* $color-text-dark */
+  --ifm-color-content-secondary: #dcd6dd; /* $color-muted-dark */
+  --ifm-border-color: rgba(255, 255, 255, 0.1);
+
+  /* Menu & Sidebar Dark Overrides */
+  --ifm-menu-color: #dcd6dd;              /* Regular link text */
+  --ifm-menu-color-active: #f9e3fb;       /* Active link text */
+  --ifm-menu-color-background-active: rgba(115, 25, 122, 0.35); /* Subtle dark purple highlight */
+  --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.05);  /* Subtle dark hover */
+}
+
+/* ── Universal Sidebar Refinements ── */
+
+/* Active item text contrast */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Ensures category headings and collapse arrows remain crisp in dark mode */
+[data-theme='dark'] .menu__list-item-collapsible:hover,
+[data-theme='dark'] .menu__link--sublist-caret:after {
+  filter: brightness(1.2);
+}
