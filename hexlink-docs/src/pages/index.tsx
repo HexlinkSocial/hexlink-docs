@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Tips and documentation for users of the Hexlink community app">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
