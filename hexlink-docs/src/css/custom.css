@@ -74,8 +74,6 @@ a, .button, .menu__link {
   transition: all 0.2s ease;
 }
 
-/* src/css/custom.css */
-
 /* ── Dark Mode Overrides ── */
 [data-theme='dark'] {
   /* High-contrast purple shades for dark backgrounds */
@@ -161,4 +159,13 @@ a, .button, .menu__link {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0;
+}
+
+.footer,
+.footer--dark {
+  --ifm-footer-background-color: #251f2f;
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: #dcd6dd;
+  --ifm-footer-title-color: #ffffff;
+  background-color: var(--ifm-footer-background-color);
 }
