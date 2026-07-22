@@ -99,6 +99,10 @@ a, .button, .menu__link {
   --ifm-menu-color-active: #f9e3fb;       /* Active link text */
   --ifm-menu-color-background-active: rgba(115, 25, 122, 0.35); /* Subtle dark purple highlight */
   --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.05);  /* Subtle dark hover */
+
+  /* Breadcrumb Overrides */
+  --ifm-breadcrumb-color-active: var(--ifm-menu-color-active);
+  --ifm-breadcrumb-item-background-active: var(--ifm-menu-color-background-active);
 }
 
 /* ── Universal Sidebar Refinements ── */
@@ -112,6 +116,12 @@ a, .button, .menu__link {
 [data-theme='dark'] .menu__list-item-collapsible:hover,
 [data-theme='dark'] .menu__link--sublist-caret:after {
   filter: brightness(1.2);
+}
+
+/* Breadcrumbs Color Alignments */
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: var(--ifm-breadcrumb-item-background-active);
+  color: var(--ifm-breadcrumb-color-active);
 }
 
 .features {
