@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/HexlinkSocial/hexlink-docs',
+            'https://github.com/HexlinkSocial/hexlink-docs/edit/main/hexlink-docs/docs',
         },
         blog: {
           showReadingTime: true,
