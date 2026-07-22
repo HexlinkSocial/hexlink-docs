@@ -13,19 +13,9 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Tips for Community Members',
-    link: '/docs/category/tips-for-community-members',
-    Svg: require('@site/static/img/logo.svg').default,
-    description: (
-      <>
-        Guides, tips, and resources to help community members get the most out of the platform.
-      </>
-    ),
-  },
-  {
     title: 'Tips for Community Runners',
     link: '/docs/category/tips-for-community-runners',
-    Svg: require('@site/static/img/logo.svg').default,
+    Svg: require('@site/static/img/bee.svg').default,
     description: (
       <>
         Best practices, management strategies, and tools for organizing and running communities.
@@ -33,9 +23,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Tips for Community Members',
+    link: '/docs/category/tips-for-community-members',
+    Svg: require('@site/static/img/hive.svg').default,
+    description: (
+      <>
+        Guides, tips, and resources for community members.
+      </>
+    ),
+  },
+  {
     title: 'Get Involved',
     link: '/docs/category/get-involved',
-    Svg: require('@site/static/img/logo.svg').default,
+    Svg: require('@site/static/img/flower.svg').default,
     description: (
       <>
         Learn how you can participate, contribute, and collaborate with our growing community.
