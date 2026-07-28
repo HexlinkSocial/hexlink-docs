@@ -80,14 +80,29 @@ const config: Config = {
         alt: 'Hexlink Logo',
         src: 'img/logo.svg',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tips',
-        },
-      ],
+    items: [
+      {
+        to: '/docs/about-us',
+        exact: true,
+        position: 'left',
+        label: 'About us',
+      },
+      {
+        to: '/docs/category/governance',
+        position: 'left',
+        label: 'Governance',
+      },
+      {
+        to: '/docs/category/tips-for-community-runners',
+        position: 'left',
+        label: 'Tips',
+      },
+      {
+        to: '/docs/category/get-involved',
+        position: 'left',
+        label: 'Get involved',
+      },
+    ],
     },
     footer: {
       style: 'dark',
